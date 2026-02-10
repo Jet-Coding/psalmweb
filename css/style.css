@@ -7,9 +7,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif, sans-serif;
-	background-color: #92c27d;
 	color: #333;
-	line-height: 1.6;
 }
 
 header {
@@ -26,41 +24,31 @@ header {
 }
 
 .psalm-branding {
-	display: flex;
-	justify-content: space-between;
-	height: 35px;
-	padding: 0 50px;
+	font-weight: 600;
+	font-size: 30px;
+	text-transform: uppercase;
 }
 
-.psalm-branding img {
-	max-height: 50px;
-	margin-right: 10px;
-}
-
-nav ul {
+nav {
 	display: flex;
 	list-style: none;
-	float: right;
-	margin-right: 20px;
-}
-
-nav ul li {
-	margin: 0 15px;
 }
 
 nav ul li a {
 	text-decoration: none;
 	color: #fff;
-	font-weight: 1000;
+	font-weight: 600;
+	padding: 10px;
+	border-radius: 8px;
 	transition: color 0.3s ease;
 }
 
 nav ul li a.active {
-	color: #ffa500;
+	background-color: #21d357;
 }
 
 nav ul li a:hover {
-	color: #ffa500;
+	background-color: #21d357;
 }
 
 nav ul li {
@@ -80,30 +68,84 @@ nav ul li {
 	display: none;
 }
 
-@media (max-width: 558px) {
-	.checkbtn {
-		display: block;
+@media screen and (min-width: 1000px) {
+	.search input {
+		display: none;
 	}
+	.toggle {
+		display: none;
+	}
+}
 
-	nav ul {
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #004d26;
-		top: 80px;
-		left: -100%;
+@media screen and (min-width: 567px) and (max-width: 999px) {
+	.nav {
+		display: block;
+		position: absolute;
+		top: 5.2rem;
+		left: -200px;
+		background-color: rgba(59, 117, 168, 0.664);
+		width: 10rem;
 		text-align: center;
+		padding: 20px 0;
+		border-radius: 0 10px 10px 0;
 		transition: all 0.5s;
 	}
-
-	nav ul li {
-		display: block;
-		margin: 30px;
-		line-height: 30px;
-	}
-
-	#check:checked ~ ul {
+	.open {
 		left: 0;
+	}
+	.nav li {
+		padding: 25px 0;
+	}
+	.nav li:hover {
+		background: none;
+	}
+	.nav li:hover {
+		color: red;
+	}
+	.search {
+		position: relative;
+	}
+	.search i {
+		position: absolute;
+		left: 5px;
+		top: 13px;
+		color: blue;
+	}
+	.container {
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 566px) {
+	.nav {
+		display: block;
+		position: absolute;
+		top: 4rem;
+		left: -200px;
+		background-color: rgba(59, 117, 168, 0.664);
+		width: 10rem;
+		text-align: center;
+		padding: 20px 0;
+		border-radius: 0 10px 10px 0;
+		transition: 0.5s;
+	}
+	.open {
+		left: 0;
+	}
+	.logo {
+		font-size: 15px;
+	}
+	.container {
+		padding: 10px 0;
+	}
+	.nav li {
+		padding: 25px 0;
+	}
+	.nav li:hover {
+		background: none;
+	}
+	.nav li:hover {
+		color: red;
 	}
 }
 
@@ -207,6 +249,7 @@ nav ul li {
 	color: #004d26;
 	margin-bottom: 40px;
 	position: relative;
+	border-bottom: 1px solid #004d26;
 }
 
 .testimonials-container {
@@ -345,6 +388,7 @@ nav ul li {
 	max-width: 400px;
 	height: auto;
 	display: block;
+	border-radius: 20px;
 }
 
 .about-content {
@@ -396,7 +440,6 @@ nav ul li {
 /* Team Section */
 .team-section {
 	padding: 80px 0;
-	background-color: #b5e7a0;
 }
 
 .section-header {
@@ -740,7 +783,7 @@ nav ul li {
 }
 
 .grid-branding .psalm-branding h3 {
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	margin-bottom: 20px;
 	font-weight: 600;
 	position: relative;
