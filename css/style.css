@@ -10,64 +10,56 @@ body {
 	color: #333;
 }
 
-header {
+#header {
+	background-color: #004d26;
+}
+
+.container {
+	display: flex;
+	align-items: center;
 	width: 100%;
 	margin: auto;
-	display: flex;
 	overflow: hidden;
-	padding: 5px 1%;
-	align-items: center;
-	background-color: #004d26;
 	justify-content: space-between;
-	color: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .psalm-branding {
 	font-weight: 600;
 	font-size: 30px;
 	text-transform: uppercase;
+	color: white;
 }
 
-nav {
+.nav {
 	display: flex;
 	list-style: none;
 }
 
-nav ul li a {
-	text-decoration: none;
-	color: #fff;
-	font-weight: 600;
+.nav li {
 	padding: 10px;
-	border-radius: 8px;
-	transition: color 0.3s ease;
+	margin: 0 5px;
+	text-decoration: none;
 }
 
-nav ul li a:hover {
+.nav li a:hover {
 	background-color: #21d357;
 }
 
-nav ul li {
+.nav li a {
 	display: inline-block;
 	line-height: 50px;
-	margin: 0 5px;
+	border-radius: 8px;
+	text-decoration: none;
+	color: #fff;
 }
 
-#check {
-	display: none;
-}
-
-.checkbtn {
+.toggle {
 	cursor: pointer;
 	font-size: 30px;
 	color: white;
-	display: none;
 }
 
 @media screen and (min-width: 1000px) {
-	.search input {
-		display: none;
-	}
 	.toggle {
 		display: none;
 	}
@@ -79,7 +71,7 @@ nav ul li {
 		position: absolute;
 		top: 5.2rem;
 		left: -200px;
-		background-color: rgba(59, 117, 168, 0.664);
+		background-color: #004d26;
 		width: 10rem;
 		text-align: center;
 		padding: 20px 0;
@@ -96,19 +88,7 @@ nav ul li {
 		background: none;
 	}
 	.nav li:hover {
-		color: red;
-	}
-	.search {
-		position: relative;
-	}
-	.search i {
-		position: absolute;
-		left: 5px;
-		top: 13px;
-		color: blue;
-	}
-	.container {
-		padding: 10px;
+		color: #21d357;
 	}
 }
 
@@ -118,7 +98,7 @@ nav ul li {
 		position: absolute;
 		top: 4rem;
 		left: -200px;
-		background-color: rgba(59, 117, 168, 0.664);
+		background-color: #004d26;
 		width: 10rem;
 		text-align: center;
 		padding: 20px 0;
@@ -128,11 +108,11 @@ nav ul li {
 	.open {
 		left: 0;
 	}
-	.logo {
-		font-size: 15px;
-	}
-	.container {
-		padding: 10px 0;
+	.psalm-branding {
+		font-weight: 600;
+		font-size: 30px;
+		text-transform: uppercase;
+		color: white;
 	}
 	.nav li {
 		padding: 25px 0;
@@ -141,7 +121,7 @@ nav ul li {
 		background: none;
 	}
 	.nav li:hover {
-		color: red;
+		color: #21d357;
 	}
 }
 
@@ -166,9 +146,16 @@ nav ul li {
 }
 
 .hero .overlay h1 {
-	font-size: 3em;
+	font-size: 5em;
 	margin-bottom: 20px;
 	font-weight: 600;
+	color: #fff;
+}
+
+.hero .overlay p {
+	font-size: 3em;
+	margin-bottom: 20px;
+	font-weight: 500;
 	color: #fff;
 }
 

@@ -1,6 +1,11 @@
 const joinNowButton = document.getElementById("joinButton");
 const wrapper = document.querySelector(".slider-wrapper");
 const dots = document.querySelectorAll(".dot");
+let menu = document.querySelector(".nav");
+
+function toggle() {
+	menu.classList.toggle("open");
+}
 
 if (joinNowButton) {
 	joinNowButton.addEventListener("click", () => {
