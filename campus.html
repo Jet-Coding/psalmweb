@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PSALM | Campus</title>
+		<title>Campus | PSALM</title>
+		<link rel="icon" type="image/ico" href="images/PSALM_logo_white.ico" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
 			rel="stylesheet" />
@@ -13,26 +14,28 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!-- Header Section -->
-		<header>
-			<div class="psalm-branding">PSALM</div>
-			<nav>
-				<input type="checkbox" id="check" />
-				<label for="check" class="checkbtn"> <i class="bi bi-list"></i> </label>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="campus.html">Campus</a></li>
-					<li><a href="programs.html">Programs</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+		<!-- Navigation -->
+		<nav>
+			<div class="logo">
+				<a href="index.html">
+					<img src="images/PSALM_Lg.png" alt="PSALM Logo" class="logo-image" />
+					<span class="brand-name">PSALM</span>
+				</a>
+			</div>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="campus.html">Campus</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="cta-button">Get Involved</button>
+		</nav>
 
 		<!-- Campus Section -->
 		<section id="campuses" class="campus-section">
 			<div class="container">
-				<div class="section-header">
+				<div class="campus-header">
 					<h2>Our Presence in the Philippines</h2>
 					<p>Empowering students across the archipelago.</p>
 				</div>
@@ -56,6 +59,16 @@
 
 					<div class="campus-card">
 						<div class="campus-icon"><i class="bx bxs-school"></i></div>
+						<h3>Siquijor</h3>
+						<p>
+							Bring transformation to the island province of Siquijor through
+							student leaders.
+						</p>
+						<span class="region-tag">Siquijor State College</span>
+					</div>
+
+					<div class="campus-card">
+						<div class="campus-icon"><i class="bx bxs-school"></i></div>
 						<h3>Davao City</h3>
 						<p>Reaching campuses across the Davao Region for Christ.</p>
 						<span class="region-tag">Davao Region</span>
@@ -74,72 +87,39 @@
 			</div>
 		</section>
 
-		<!-- Contact Section-->
-		<section id="contact" class="contact-info">
-			<div class="contact-section">
-				<div class="contact-grid">
-					<div class="grid-branding">
-						<img
-							src="images/PSALM_Logo.png"
-							class="footer-logo"
-							alt="psalm-logo" />
-						<div class="psalm-branding">
-							<h3>
-								<strong>Philippine Student Alliance Lay Movement Inc.</strong>
-							</h3>
-						</div>
-					</div>
-
-					<div class="grid-col contact-us">
-						<h3>Contact Us</h3>
-						<a href="#" class="info-item">
-							<i class="bx bxs-map"></i>
-							<span>VH Garces Street, Talisay, Cebu, Philippines</span>
-						</a>
-						<a href="psalm.nationaloffice@gmail.com" class="info-item">
-							<i class="bx bxs-envelope"></i>
-							<span>psalm.nationaloffice@gmail.com</span>
-						</a>
-						<a href="tel:+639173037257" class="info-item">
-							<i class="bx bxs-phone"></i>
-							<span>+63 917 303 7257</span>
-						</a>
-					</div>
-
-					<div class="grid-col quick-links">
-						<h3>Quick Links</h3>
-						<ul>
-							<li>
-								<a href="index.html"><strong>Home</strong></a>
-							</li>
-							<li>
-								<a href="about.html"><strong>About</strong></a>
-							</li>
-							<li>
-								<a href="programs.html"><strong>Programs</strong></a>
-							</li>
-						</ul>
-						<div class="social-links">
-							<a href="#" class="social-icon">
-								<i class="bx bxl-facebook"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-twitter"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-instagram"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-youtube"></i>
-							</a>
-						</div>
-					</div>
+		<!-- Footer Section -->
+		<footer>
+			<div class="footer-grid">
+				<div class="footer-col">
+					<h4>CONNECT</h4>
+					<p>Contact Us</p>
+				</div>
+				<div class="footer-col">
+					<h4>RESOURCES</h4>
+					<p>Download App</p>
+				</div>
+				<div class="footer-col">
+					<h4>GET INVOLVED</h4>
+					<p>Give / Pray</p>
 				</div>
 			</div>
-		</section>
-		<footer>
+			<div class="social-links">
+				<a href="#" class="social-icon">
+					<i class="bx bxl-facebook"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-twitter"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-instagram"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-youtube"></i>
+				</a>
+			</div>
 			<p>
-				&copy; 2025 PSALM. All rights reserved. | <a href="#">Privacy Policy</a>
+				&copy; 1969-2025 PSALM. All rights reserved. |
+				<a href="#">Privacy Policy</a>
 			</p>
 		</footer>
 		<script src="js/script.js"></script>

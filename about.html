@@ -3,31 +3,31 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PSALM | About</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-			rel="stylesheet" />
+		<title>About | PSALM</title>
+		<link rel="icon" type="image/ico" href="images/PSALM_logo_white.ico" />
 		<link
 			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!-- Header Section -->
-		<header>
-			<div class="psalm-branding">PSALM</div>
-			<nav>
-				<input type="checkbox" id="check" />
-				<label for="check" class="checkbtn"> <i class="bi bi-list"></i> </label>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="campus.html">Campus</a></li>
-					<li><a href="programs.html">Programs</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+		<!-- Navigation -->
+		<nav>
+			<div class="logo">
+				<a href="index.html">
+					<img src="images/PSALM_Lg.png" alt="PSALM Logo" class="logo-image" />
+					<span class="brand-name">PSALM</span>
+				</a>
+			</div>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="campus.html">Campus</a></li>
+				<li><a href="programs.html">Programs</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="cta-button">Get Involved</button>
+		</nav>
 
 		<!-- About Section -->
 		<section id="about">
@@ -36,7 +36,7 @@
 					<img src="images/anniversary.jpg" alt="Blessed 55 Anniversary" />
 				</div>
 				<div class="about-content">
-					<h3>PHILIPPINE STUDENT ALLIANCE LAY MOVEMENT</h3>
+					<h3>PHILIPPINE STUDENT ALLIANCE LAY MOVEMENT INC.</h3>
 					<p>
 						The Philippine Student Alliance Lay Movement, Inc., officially
 						referred to as PSALM, is a specialized Christian ministry committed
@@ -49,138 +49,190 @@
 						ministry became a national movement and duly registered with the
 						Securities and Exchange Commission.
 					</p>
-					<a href="#" class="read-more-btn">READ MORE</a>
+					<span class="more-text" style="display: none">
+						It is an interdenominational Christian organization working among
+						students and the lay. PSALM is now in almost all key cities,
+						municipalities, and provinces throughout the Philippines, namely:
+						Zamboanga City, Ipil, Buug, Pagadian City, Ozamiz City, Dipolog
+						City, Davao City, Tagum City, Mati, Cagayan de Oro City, Bukidon
+						(Malaybalay & Valencia), Butuan City, Iligan City, Cotabato City,
+						Midsayap (North Cotabato), General Santos City, Sultan Kudarat,
+						Koronadal, Kidapawan City, Arakan, Kabacan, Cebu, Dumaguete City,
+						Iloilo City, Bacolod City, Sogod (Southern Leyte), Naval (Eastern
+						Leyte), Tagbilaran City (Bohol), Metro Manila, Naga City, Romblon
+						and Puerto Princesa (Palawan).
+						<br />
+						<br />
+						PSALM, as a movement, believes that when we reach a student, we
+						reach a family; when we reach a family, we reach a community ; and
+						when we reach a community, we transform the world.
+					</span>
+					<a href="javascript:void(0)" class="read-more-btn" id="readMoreBtn"
+						>READ MORE</a
+					>
 				</div>
 			</div>
 		</section>
 
-		<!-- Team Section -->
-		<section id="team" class="team-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="sub-title">The People Behind PSALM</span>
-					<h2>Our Servant Leaders</h2>
+		<section class="values-container">
+			<div class="value-card">
+				<h3>OUR MISSION</h3>
+				<div class="icon"><i class="bx bxs-donate-heart"></i></div>
+				<p>
+					Establish and strengthen campus and marketplace ministries in
+					strategic locations.
+				</p>
+			</div>
+			<div class="value-card">
+				<h3>OUR VISION</h3>
+				<div class="icon"><i class="bx bx-globe"></i></div>
+				<p>
+					A movement that produces dynamic servant leaders committed to
+					transforming the world.
+				</p>
+			</div>
+			<div class="value-card">
+				<h3>OUR CORE VALUES</h3>
+				<div class="icon"><i class="bx bxs-group"></i></div>
+				<p>
+					Pray continually.
+					<br />
+					Serve Joyfully with your gifts.
+					<br />
+					Appreciate and value ministry workers and partners.
+					<br />
+					Love one another.
+					<br />
+					Maintain the unity of the movement.
+				</p>
+			</div>
+		</section>
+
+		<section class="hero-categories">
+			<div
+				class="category-card"
+				style="
+					background-image:
+						linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+						url(&quot;images/Evangelism.jpg&quot;);
+				">
+				<div class="card-content">
+					<h2>STUDENTS</h2>
+					<p>Description about reaching students and their impact on campus.</p>
+				</div>
+			</div>
+			<div
+				class="category-card"
+				style="
+					background-image:
+						linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+						url(&quot;images/CaringCircle.jpg&quot;);
+				">
+				<div class="card-content">
+					<h2>LEADERS</h2>
+					<p>Empowering the next generation of leadership through faith.</p>
+				</div>
+			</div>
+			<div
+				class="category-card"
+				style="
+					background-image:
+						linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+						url(&quot;images/ChurchSpeakTeam.jpg&quot;);
+				">
+				<div class="card-content">
+					<h2>CHURCHES</h2>
 					<p>
-						Meet the dedicated Campus Missionaries committed to reaching the
-						students and transforming the world.
+						Building strong communities and partnerships with local churches.
 					</p>
 				</div>
+			</div>
+		</section>
 
-				<div class="team-grid">
-					<div class="team-card">
-						<div class="member-image">
-							<img src="images/Founder.jpg" alt="Founder" />
-							<div class="social-overlay">
-								<a href="#"><i class="bx bxl-facebook"></i></a>
-								<a href="#"><i class="bx bxl-linkedin"></i></a>
-								<a href="#"><i class="bx bxs-envelope"></i></a>
-							</div>
+		<section class="timeline-section">
+			<h2 class="section-title">HISTORY OF PSALM</h2>
+			<div class="title-underline"></div>
+
+			<div class="timeline-container">
+				<div class="timeline-item">
+					<div class="year">1969</div>
+					<div class="content-box">
+						<div class="text-side">
+							<p>
+								Dr. Joseph Arthur established the College Youth Center (CYC) on
+								August 8, 1969 in Zamboanga City, Philippines.
+							</p>
 						</div>
-						<div class="member-info">
-							<h3>Dr. Joseph Arthur</h3>
-							<span>Founder</span>
+						<div class="image-side">
+							<img src="images/Founder.jpg" alt="Dr. Joseph Arthur" />
 						</div>
 					</div>
+				</div>
 
-					<div class="team-card">
-						<div class="member-image">
-							<img src="images/ND.jpg" alt="National Director" />
-							<div class="social-overlay">
-								<a href="#"><i class="bx bxl-facebook"></i></a>
-								<a href="#"><i class="bx bxl-instagram"></i></a>
-								<a href="#"><i class="bx bxs-envelope"></i></a>
-							</div>
-						</div>
-						<div class="member-info">
-							<h3>Christer T. Luchavez</h3>
-							<span>National Director</span>
-						</div>
+				<div class="timeline-item">
+					<div class="year">1974</div>
+					<div class="content-box full-text">
+						<p>
+							Later on 1974, this ministry became a national movement and duly
+							registered with the Securities and Exchange Commission as the
+							Philippine Student Alliance Lay Movement, Inc. (PSALM).
+						</p>
 					</div>
+				</div>
 
-					<div class="team-card">
-						<div class="member-image">
-							<img src="images/CM.jpg" alt="Campus Missionary" />
-							<div class="social-overlay">
-								<a href="#"><i class="bx bxl-facebook"></i></a>
-								<a href="#"><i class="bx bxl-instagram"></i></a>
-								<a href="#"><i class="bx bxs-envelope"></i></a>
-							</div>
+				<div class="timeline-item">
+					<div class="year">1978</div>
+					<div class="content-box">
+						<div class="text-side">
+							<p>
+								PSALM began to extend, expand, and enlarge by opening its first
+								MISSION PROJECT in Metro Manila in 1974 and it second MISSION
+								PROJECT in Dumaguete City. Though not a mission project, the
+								work North Cotabato was also opened and pioneered by the
+								Delegetes who attended the NLTI in 1978.
+							</p>
 						</div>
-						<div class="member-info">
-							<h3>Jerald B. Sindol</h3>
-							<span>Campus Missionary</span>
+						<div class="image-side">
+							<img src="images/PSALM_Logo.png" alt="pioneer" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Contact Section-->
-		<section id="contact" class="contact-info">
-			<div class="contact-section">
-				<div class="contact-grid">
-					<div class="grid-branding">
-						<img
-							src="images/PSALM_Logo.png"
-							class="footer-logo"
-							alt="psalm-logo" />
-						<div class="psalm-branding">
-							<h3>
-								<strong>Philippine Student Alliance Lay Movement Inc.</strong>
-							</h3>
-						</div>
-					</div>
-
-					<div class="grid-col contact-us">
-						<h3>Contact Us</h3>
-						<a href="#" class="info-item">
-							<i class="bx bxs-map"></i>
-							<span>VH Garces Street, Talisay, Cebu, Philippines</span>
-						</a>
-						<a href="psalm.nationaloffice@gmail.com" class="info-item">
-							<i class="bx bxs-envelope"></i>
-							<span>psalm.nationaloffice@gmail.com</span>
-						</a>
-						<a href="tel:+639173037257" class="info-item">
-							<i class="bx bxs-phone"></i>
-							<span>+63 917 303 7257</span>
-						</a>
-					</div>
-
-					<div class="grid-col quick-links">
-						<h3>Quick Links</h3>
-						<ul>
-							<li>
-								<a href="index.html"><strong>Home</strong></a>
-							</li>
-							<li>
-								<a href="about.html"><strong>About</strong></a>
-							</li>
-							<li>
-								<a href="programs.html"><strong>Programs</strong></a>
-							</li>
-						</ul>
-						<div class="social-links">
-							<a href="#" class="social-icon">
-								<i class="bx bxl-facebook"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-twitter"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-instagram"></i>
-							</a>
-							<a href="#" class="social-icon">
-								<i class="bx bxl-youtube"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<!-- Footer Section -->
 		<footer>
+			<div class="footer-grid">
+				<div class="footer-col">
+					<h4>CONNECT</h4>
+					<p>Contact Us</p>
+				</div>
+				<div class="footer-col">
+					<h4>RESOURCES</h4>
+					<p>Download App</p>
+				</div>
+				<div class="footer-col">
+					<h4>GET INVOLVED</h4>
+					<p>Give / Pray</p>
+				</div>
+			</div>
+			<div class="social-links">
+				<a href="#" class="social-icon">
+					<i class="bx bxl-facebook"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-twitter"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-instagram"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="bx bxl-youtube"></i>
+				</a>
+			</div>
 			<p>
-				&copy; 2025 PSALM. All rights reserved. | <a href="#">Privacy Policy</a>
+				&copy; 1969-2025 PSALM. All rights reserved. |
+				<a href="#">Privacy Policy</a>
 			</p>
 		</footer>
 		<script src="js/script.js"></script>

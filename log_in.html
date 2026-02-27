@@ -8,9 +8,13 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 	</head>
 	<body>
-		<div class="container">
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login">Login</button>
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<div id="id01" class="container animate">
 			<!-- Login Form -->
-			<div class="form-box login">
+			 
+			<div  class="form-box login">
+				
 				<form action="#">
 					<h1>Login</h1>
 					<div class="input-box">

@@ -82,3 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (e.target === modal) closeModal();
 	};
 });
+
+document.getElementById("readMoreBtn").addEventListener("click", function () {
+	const moreText = document.querySelector(".more-text");
+	const btnText = document.getElementById("readMoreBtn");
+
+	if (moreText.style.display === "none") {
+		moreText.style.display = "inline"; // Or "block" depending on your layout
+		btnText.innerHTML = "READ LESS";
+	} else {
+		moreText.style.display = "none";
+		btnText.innerHTML = "READ MORE";
+	}
+});
