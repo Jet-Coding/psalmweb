@@ -1,7 +1,7 @@
 const joinNowButton = document.getElementById("joinButton");
 const wrapper = document.querySelector(".slider-wrapper");
 const dots = document.querySelectorAll(".dot");
-let menu = document.querySelector(".nav");
+let menu = document.querySelector(".nav-links");
 
 function toggle() {
 	menu.classList.toggle("open");

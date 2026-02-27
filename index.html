@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>PSALM</title>
-		<link rel="icon" type="image/ico" href="images/PSALM_logo_white.ico" />
+		<link rel="icon" type="image/ico" href="images/PSALM.ico" />
 		<link
 			rel="stylesheet"
 			href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
@@ -23,14 +23,21 @@
 					<span class="brand-name">PSALM</span>
 				</a>
 			</div>
+
 			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html" class="active">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="campus.html">Campus</a></li>
 				<li><a href="programs.html">Programs</a></li>
 				<li><a href="national.html">National Office</a></li>
 			</ul>
 			<button class="cta-button">Get Involved</button>
+			<input type="checkbox" id="menu-btn" class="menu-btn" />
+
+			<label for="menu-btn" class="menu-icon">
+				<i class="bx bx-menu" id="menu-open" onclick="toggle()"></i>
+				<i class="bx bx-x" id="menu-close" onclick="toggle()"></i>
+			</label>
 		</nav>
 
 		<!-- Hero Section -->
