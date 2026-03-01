@@ -8,249 +8,9 @@
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-		<style>
-			:root {
-				--sidebar-bg: #f5f5f5;
-				--main-bg: #e9ecef;
-				--primary-accent: #004d26; /* Muted maroon/purple */
-				--text-dark: #333;
-				--border-color: #ccc;
-				--white: #ffffff;
-				--status-green: #28a745;
-				--status-yellow: #ffc107;
-			}
-
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-				font-family: "Segoe UI", Arial, sans-serif;
-			}
-
-			body {
-				display: flex;
-				min-height: 100vh;
-				background-color: var(--main-bg);
-				color: var(--text-dark);
-			}
-
-			/* --- Sidebar --- */
-			aside {
-				width: 240px;
-				background-color: var(--sidebar-bg);
-				border-right: 1px solid var(--border-color);
-				display: flex;
-				flex-direction: column;
-			}
-
-			.sidebar-item {
-				padding: 15px 25px;
-				display: flex;
-				align-items: center;
-				cursor: pointer;
-				color: #444;
-				text-decoration: none;
-				font-size: 14px;
-			}
-
-			.sidebar-item i {
-				margin-right: 15px;
-				width: 18px;
-				text-align: center;
-			}
-
-			.sidebar-item.active {
-				background-color: #e0e0e0;
-				border-left: 5px solid var(--primary-accent);
-				font-weight: bold;
-			}
-
-			.sidebar-item:hover:not(.active) {
-				background-color: #eee;
-			}
-
-			/* --- Main Content --- */
-			main {
-				flex-grow: 1;
-				padding: 25px 40px;
-				overflow-y: auto;
-			}
-
-			header {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom: 25px;
-			}
-
-			.user-dropdown {
-				display: flex;
-				align-items: center;
-				background: white;
-				padding: 8px 15px;
-				border-radius: 8px;
-				border: 1px solid var(--border-color);
-				gap: 10px;
-				font-size: 13px;
-			}
-
-			/* --- Cards & Sections --- */
-			.card {
-				background: var(--white);
-				border: 1px solid var(--border-color);
-				border-radius: 12px;
-				padding: 20px;
-				margin-bottom: 20px;
-				position: relative;
-			}
-
-			.section-title {
-				font-size: 16px;
-				font-weight: 800;
-				margin-bottom: 20px;
-				text-transform: uppercase;
-			}
-
-			/* Quick Actions */
-			.action-grid {
-				display: grid;
-				grid-template-columns: 1.5fr 1fr;
-				gap: 25px;
-			}
-
-			.btn-large {
-				background-color: var(--primary-accent);
-				color: white;
-				padding: 18px;
-				border-radius: 8px;
-				text-align: center;
-				cursor: pointer;
-				font-weight: bold;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 12px;
-				text-transform: uppercase;
-			}
-
-			.submit-preview {
-				border: 1px solid var(--border-color);
-				border-top: none;
-				padding: 20px;
-				border-radius: 0 0 10px 10px;
-				background: white;
-				margin-top: -5px;
-				width: 100%;
-			}
-
-			.input-group {
-				margin-bottom: 12px;
-			}
-
-			.input-group label {
-				display: block;
-				font-size: 11px;
-				margin-bottom: 4px;
-				color: #666;
-			}
-
-			.input-group input {
-				width: 100%;
-				padding: 6px;
-				border: 1px solid #aaa;
-				border-radius: 4px;
-			}
-
-			/* System Alerts */
-			.alerts-box {
-				border: 1px solid var(--border-color);
-				padding: 15px;
-				border-radius: 10px;
-				height: fit-content;
-			}
-
-			.alert-item {
-				display: flex;
-				align-items: center;
-				gap: 10px;
-				font-size: 14px;
-				margin-bottom: 8px;
-			}
-
-			.dot {
-				height: 10px;
-				width: 10px;
-				border-radius: 50%;
-			}
-
-			/* History Table */
-			.table-controls {
-				display: flex;
-				justify-content: flex-end;
-				margin-bottom: 15px;
-				gap: 10px;
-			}
-
-			.search-bar {
-				padding: 5px 10px;
-				border: 1px solid var(--border-color);
-				border-radius: 5px;
-			}
-
-			table {
-				width: 100%;
-				border-collapse: collapse;
-			}
-
-			th {
-				text-align: left;
-				border-bottom: 2px solid #ddd;
-				padding: 10px;
-				font-size: 14px;
-				color: #444;
-			}
-
-			td {
-				padding: 12px 10px;
-				border-bottom: 1px solid #eee;
-				font-size: 13px;
-			}
-
-			.status {
-				display: flex;
-				align-items: center;
-				gap: 5px;
-			}
-
-			/* Feed */
-			.feed-item {
-				border-bottom: 1px solid #eee;
-				padding: 15px 0;
-				display: flex;
-				justify-content: space-between;
-			}
-
-			.feed-tag {
-				font-size: 10px;
-				background: #eee;
-				padding: 2px 6px;
-				border-radius: 4px;
-				vertical-align: middle;
-			}
-
-			.db-icon {
-				position: absolute;
-				bottom: 15px;
-				right: 15px;
-				color: var(--primary-accent);
-				background: #f8d7da;
-				padding: 8px;
-				border-radius: 8px;
-			}
-		</style>
 	</head>
 	<body>
-		<aside>
+		<aside class="cm-sidebar">
 			<div
 				style="
 					padding: 25px;
@@ -260,29 +20,31 @@
 				">
 				PSALM
 			</div>
-			<a href="#" class="sidebar-item active"
+			<a href="#" class="cm-sidebar-item active"
 				><i class="fas fa-home"></i> Dashboard Overview</a
 			>
-			<a href="#" class="sidebar-item"
+			<a href="#" class="cm-sidebar-item"
 				><i class="fas fa-tasks"></i> Reports Management</a
 			>
-			<a href="#" class="sidebar-item"
+			<a href="#" class="cm-sidebar-item"
 				><i class="fas fa-rss"></i> Announcements Feed</a
 			>
-			<a href="#" class="sidebar-item"><i class="fas fa-user"></i> My Data</a>
-			<a href="#" class="sidebar-item" style="margin-top: auto"
+			<a href="#" class="cm-sidebar-item"
+				><i class="fas fa-user"></i> My Data</a
+			>
+			<a href="#" class="cm-sidebar-item" style="margin-top: auto"
 				><i class="fas fa-sign-out-alt"></i> Logout</a
 			>
 		</aside>
 
-		<main>
-			<header>
+		<main class="cm-main">
+			<header class="cm-header">
 				<h1>Campus Missionary Dashboard</h1>
 				<div style="display: flex; align-items: center; gap: 20px">
 					<span style="font-size: 14px"
 						><i class="fas fa-envelope"></i> 3 Unread Announcements</span
 					>
-					<div class="user-dropdown">
+					<div class="cm-user-dropdown">
 						<i
 							class="fas fa-user-circle"
 							style="font-size: 24px; color: #888"></i>
@@ -295,24 +57,24 @@
 				</div>
 			</header>
 
-			<section class="card">
-				<h2 class="section-title">Quick Actions</h2>
-				<div class="action-grid">
+			<section class="cm-card">
+				<h2 class="cm-section-title">Quick Actions</h2>
+				<div class="cm-action-grid">
 					<div>
-						<div class="btn-large">
+						<div class="cm-btn-large">
 							<i class="fas fa-plus-circle"></i> Submit a Report
 						</div>
-						<div class="submit-preview">
+						<div class="cm-submit-preview">
 							<strong>Submit Report</strong>
-							<div class="input-group" style="margin-top: 15px">
+							<div class="cm-input-group" style="margin-top: 15px">
 								<label>Form</label>
 								<input type="text" />
 							</div>
-							<div class="input-group">
+							<div class="cm-input-group">
 								<label>Subject</label>
 								<input type="text" />
 							</div>
-							<div class="input-group">
+							<div class="cm-input-group">
 								<label>Submit</label>
 								<div
 									style="
@@ -324,21 +86,21 @@
 						</div>
 					</div>
 					<div>
-						<div class="btn-large">
+						<div class="cm-btn-large">
 							<i class="fas fa-download"></i> View & Download Data
 						</div>
-						<div class="alerts-box" style="margin-top: 25px">
-							<h3 class="section-title" style="font-size: 14px">
+						<div class="cm-alerts-box" style="margin-top: 25px">
+							<h3 class="cm-section-title" style="font-size: 14px">
 								System Alerts
 							</h3>
-							<div class="alert-item">
+							<div class="cm-alert-item">
 								<span
-									class="dot"
+									class="cm-dot"
 									style="background: var(--primary-accent)"></span>
 								3 reports pending validation
 							</div>
-							<div class="alert-item">
-								<span class="dot" style="background: #ccc"></span>
+							<div class="cm-alert-item">
+								<span class="cm-dot" style="background: #ccc"></span>
 								...
 							</div>
 						</div>
@@ -346,10 +108,10 @@
 				</div>
 			</section>
 
-			<section class="card">
-				<h2 class="section-title">Recent Reports History</h2>
-				<div class="table-controls">
-					<input type="text" placeholder="Filter" class="search-bar" />
+			<section class="cm-card">
+				<h2 class="cm-section-title">Recent Reports History</h2>
+				<div class="cm-table-controls">
+					<input type="text" placeholder="Filter" class="cm-search-bar" />
 					<button
 						style="
 							padding: 5px 10px;
@@ -361,7 +123,7 @@
 					</button>
 				</div>
 				<table>
-					<thead>
+					<thead class="cm-th">
 						<tr>
 							<th>Date</th>
 							<th>Type</th>
@@ -370,12 +132,12 @@
 							<th>Action</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="cm-td">
 						<tr>
 							<td>———</td>
 							<td>Type</td>
 							<td>———</td>
-							<td class="status">
+							<td class="cm-status">
 								<i
 									class="fas fa-check-circle"
 									style="color: var(--status-green)"></i>
@@ -390,7 +152,7 @@
 							<td>———</td>
 							<td>Type</td>
 							<td>———</td>
-							<td class="status">
+							<td class="cm-status">
 								<i
 									class="fas fa-circle"
 									style="color: var(--status-yellow)"></i>
@@ -405,7 +167,7 @@
 							<td>———</td>
 							<td>SL</td>
 							<td>———</td>
-							<td class="status">
+							<td class="cm-status">
 								<i
 									class="fas fa-check-circle"
 									style="color: var(--status-green)"></i>
@@ -415,15 +177,15 @@
 						</tr>
 					</tbody>
 				</table>
-				<div class="db-icon"><i class="fas fa-database"></i></div>
+				<div class="cm-db-icon"><i class="fas fa-database"></i></div>
 			</section>
 
-			<section class="card">
-				<h2 class="section-title">
-					Announcements Feed <span class="feed-tag">(Read-Only)</span>
+			<section class="cm-card">
+				<h2 class="cm-section-title">
+					Announcements Feed <span class="cm-feed-tag">(Read-Only)</span>
 				</h2>
 
-				<div class="feed-item">
+				<div class="cm-feed-item">
 					<div style="display: flex; gap: 15px">
 						<i
 							class="fas fa-user-circle"
@@ -440,7 +202,7 @@
 					<div style="font-size: 12px; color: #888">11am / AM</div>
 				</div>
 
-				<div class="feed-item">
+				<div class="cm-feed-item">
 					<div style="display: flex; gap: 15px">
 						<i
 							class="fas fa-user-circle"
@@ -452,7 +214,7 @@
 					</div>
 					<div style="font-size: 12px; color: #888">Mon / 20</div>
 				</div>
-				<div class="db-icon" style="bottom: 70px">
+				<div class="cm-db-icon" style="bottom: 70px">
 					<i class="fas fa-database"></i>
 				</div>
 			</section>
