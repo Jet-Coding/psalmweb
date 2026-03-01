@@ -231,119 +231,144 @@ nav {
 	font-size: 1.5rem;
 }
 
-/* Testimonials Section */
+/* --- Testimonials Section --- */
 #testimonials {
-	padding: 60px 20px;
+	padding: 80px 20px;
+	background-color: var(--light);
+	text-align: center;
+}
+
+.testimonials-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	overflow: hidden; /* Keeps the cards from spilling out */
 }
 
 #testimonials h2 {
 	font-size: 2.5rem;
+	margin-bottom: 50px;
 	color: var(--primary);
-	margin-bottom: 40px;
 	position: relative;
-	border-bottom: 1px solid var(--primary);
 }
 
-.testimonials-container {
-	max-width: 900px;
-	margin: 0 auto;
-	overflow: hidden;
+/* --- Slider Logic --- */
+.testimonial-slider {
+	width: 100%;
 	position: relative;
 }
 
 .slider-wrapper {
 	display: flex;
-	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 2);
-	width: 100%;
+	transition: transform 0.5s ease-in-out;
+	/* If you aren't using JS yet, 'gap' helps space them */
+	gap: 20px;
 }
 
+/* --- Testimonial Card --- */
 .testimonial-card {
-	display: flex;
-	align-items: flex-start;
-	gap: 50px;
-	padding: 50px;
-	background: var(--lightgreen);
-	border-radius: 20px;
-	flex: 0 0 100%;
+	min-width: calc(33.333% - 20px); /* Shows 3 cards on desktop */
+	background: var(--light);
+	padding: 40px 30px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 	box-sizing: border-box;
-}
-
-.testimonial-header {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+	transform: translateY(-5px);
+}
+
+/* --- Header & Profile Pic --- */
+.testimonial-header {
+	display: flex;
 	align-items: center;
-	text-align: center;
-	flex-shrink: 0;
-	width: 240px;
+	margin-bottom: 20px;
+	text-align: left;
 }
 
 .profile-pic {
-	width: 240px;
-	height: 240px;
-	border-radius: 30px;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
 	object-fit: cover;
-	margin-bottom: 20px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	margin-right: 15px;
+	border: 3px solid var(--green); /* PSALM Primary Color */
 }
 
 .profile-info .name {
-	font-size: 1.3rem;
-	font-weight: 800;
+	font-weight: 700;
+	font-size: 1.1rem;
 	color: var(--primary);
 	margin: 0;
 }
 
 .profile-info .role {
-	font-size: 1rem;
-	color: var(--primary);
-	margin-top: 5px;
-	font-weight: 500;
+	font-size: 0.85rem;
+	color: var(--green);
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-.testimonial-header {
-	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
-}
-
+/* --- Quote Text --- */
 .quote {
-	font-size: 1.6rem;
-	line-height: 1.8;
 	font-style: italic;
 	color: var(--dark);
+	line-height: 1.6;
+	margin: 0;
 	position: relative;
-	padding-left: 20px;
-	border-left: 4px solid var(--lightgreen);
 }
 
 .quote::before {
-	font-size: 4rem;
-	color: var(--primary);
-	opacity: 0.2;
+	content: '"';
+	font-size: 3rem;
+	color: var(--lightdark);
 	position: absolute;
 	top: -20px;
 	left: -10px;
+	font-family: serif;
+	z-index: 0;
 }
 
-.dots-container {
+/* --- Navigation Dots --- */
+/* .dots-container {
 	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
 }
 
 .dot {
-	height: 12px;
 	width: 12px;
-	margin: 0 5px;
-	background-color: var(--dark);
+	height: 12px;
+	background-color: #bbb;
 	border-radius: 50%;
 	display: inline-block;
 	cursor: pointer;
-	transition: 0.3s;
+	transition: background-color 0.3s ease;
 }
 
 .dot.active {
-	background-color: var(--primary);
-	width: 30px;
-	border-radius: 10px;
+	background-color: #007bff;
+	width: 30px; /* Stretched effect for the active dot 
+	border-radius: 20px;
+} */
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+	.testimonial-card {
+		min-width: calc(50% - 20px); /* 2 cards on tablets */
+	}
+}
+
+@media (max-width: 768px) {
+	.testimonial-card {
+		min-width: 100%; /* 1 card on mobile */
+	}
 }
 
 /* Contact Section */

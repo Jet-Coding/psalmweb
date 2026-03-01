@@ -1,5 +1,5 @@
 const joinNowButton = document.getElementById("joinButton");
-const wrapper = document.querySelector(".slider-wrapper");
+/* const wrapper = document.querySelector(".slider-wrapper"); */
 const dots = document.querySelectorAll(".dot");
 let menu = document.querySelector(".nav-links");
 
@@ -13,7 +13,7 @@ if (joinNowButton) {
 	});
 }
 
-if (wrapper && dots.length > 0) {
+/* if (wrapper && dots.length > 0) {
 	let currentIndex = 0;
 	const totalSlides = dots.length;
 
@@ -49,7 +49,7 @@ if (wrapper && dots.length > 0) {
 		"mouseleave",
 		() => (scrollInterval = startAutoscroll()),
 	);
-}
+} */
 
 document.addEventListener("DOMContentLoaded", () => {
 	const modal = document.getElementById("programModal");

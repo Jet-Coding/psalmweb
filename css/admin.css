@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary: #004d26;
+	--secondary: #ed8936;
+	--light: #f7fafc;
+	--lightdark: #ddd;
+	--dark: #1a202c;
+	--lightgreen: #b5e7a0;
+	--green: #018f48;
+	--sidebar-bg: #f5f5f5;
+	--main-bg: #e9ecef;
+	--primary-accent: #9a4d70; /* The muted purple/maroon color */
+	--text-dark: #333;
+	--border-color: #ccc;
+	--white: #ffffff;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--dark);
+}
+
+/* --- General Form Styling --- */
+.aig {
+	text-align: center;
+	color: var(--primary);
+	margin-bottom: 30px;
+}
+
+/* --- Form Header (Top Inputs) --- */
+.form-header {
+	background: var(--light);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	margin-bottom: 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	align-items: center;
+}
+
+.form-header label {
+	font-weight: bold;
+	font-size: 0.9rem;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-header input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid var(--lightdark);
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/* --- Table Styling --- */
+.table-container {
+	width: 100%;
+	overflow-x: auto; /* Adds horizontal scroll for many columns */
+	background: var(--light);
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	padding: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+caption {
+	padding: 15px;
+	font-weight: bold;
+	font-size: 1.2rem;
+	background: var(--primary);
+	color: var(--light);
+}
+
+th,
+td {
+	border: 1px solid var(--lightdark);
+	padding: 4px;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* Alternate row colors for better tracking */
+th:nth-child(1),
+td:nth-child(1) {
+	width: 150px;
+	position: sticky; /* Keeps names visible */
+	left: 0;
+	background: var(--light);
+	z-index: 2;
+}
+
+tbody tr:hover {
+	background-color: var(--lightgreen);
+}
+
+/* --- Input Styling inside Table --- */
+table input[type="text"],
+table input[type="date"] {
+	width: 100%;
+	padding: 6px;
+	border: 1px solid var(--lightdark);
+	border-radius: 3px;
+	font-size: 0.85rem;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+table input:focus {
+	border-color: var(--primary);
+	background-color: var(--light);
+}
+
+/* Narrower width for the numeric date columns (1-10) */
+th:nth-child(n + 4):nth-child(-n + 13),
+td:nth-child(n + 4):nth-child(-n + 13) {
+	width: 90px;
+}
+
+/* --- Submit Button --- */
+.submit-container {
+	text-align: right;
+	margin-top: 15px;
+}
+
+input[type="button"] {
+	background: var(--secondary);
+	color: var(--light);
+	padding: 10px 30px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	background: var(--primary);
+	color: var(--light);
+	padding: 10px 30px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
