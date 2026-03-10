@@ -34,7 +34,7 @@ body {
 }
 
 .admin-sidebar-item {
-	padding: 15px 20px;
+	padding: 10px 20px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
@@ -45,7 +45,7 @@ body {
 }
 
 .admin-sidebar-item i {
-	margin-right: 15px;
+	margin-right: 10px;
 	width: 20px;
 	text-align: center;
 }
@@ -87,6 +87,38 @@ body {
 	font-size: 24px;
 	margin-right: 10px;
 	color: #777;
+}
+
+/* Inner Grid using Flexbox too */
+.stats-grid {
+	display: flex;
+	gap: 5px;
+	margin-bottom: 20px;
+	flex-wrap: wrap; /* Allows cards to drop to next line on small screens */
+}
+
+.card {
+	flex: 1; /* All cards take equal width */
+	min-width: 200px;
+	font-size: 18px;
+	font-weight: bold;
+	background: var(--white);
+	border: 1px solid var(--border-color);
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 10px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.number {
+	border-bottom: 4px solid var(--primary-accent);
 }
 
 /* --- Admin Dashboard Widgets --- */

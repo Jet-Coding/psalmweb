@@ -267,7 +267,7 @@ nav {
 /* --- Testimonial Card --- */
 .testimonial-card {
 	min-width: calc(33.333% - 20px); /* Shows 3 cards on desktop */
-	background: var(--light);
+	background: var(--lightdark);
 	padding: 40px 30px;
 	border-radius: 15px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -374,6 +374,7 @@ nav {
 /* Contact Section */
 .contact {
 	padding: 5rem 5%;
+	background-color: var(--lightdark);
 }
 
 .section-title {
@@ -488,7 +489,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	padding: 50px 10%;
-	background: var(--light);
+	background: var(--lightdark);
 }
 
 .value-card {
@@ -497,7 +498,7 @@ nav {
 	padding: 20px;
 	margin: 10px;
 	border-style: solid;
-	border-color: var(--lightdark);
+	border-color: var(--light);
 	border-width: 1px;
 	border-radius: 10px;
 }
@@ -618,7 +619,8 @@ nav {
 
 /* Campus Section */
 .campus-section {
-	padding: 80px 0;
+	padding: 20px;
+	margin: 20px 40px;
 }
 
 .campus-header {
@@ -682,9 +684,9 @@ nav {
 
 /* Programs Section */
 #programs {
-	margin: 40px 40px;
+	margin: 20px 40px;
 	background-color: var(--light);
-	padding: 40px;
+	padding: 20px;
 	border-radius: 10px;
 }
 
@@ -820,7 +822,8 @@ nav {
 
 /* National Team Section */
 .national-section {
-	padding: 80px 0;
+	padding: 20px;
+	margin: 20px 40px;
 }
 
 .national-header {

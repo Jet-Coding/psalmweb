@@ -4,30 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Admin Dashboard | PSALM</title>
-		<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="server.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 	</head>
 	<body>
 		<aside class="admin-sidebar">
-			<div style="padding: 20px; font-weight: bold; font-size: 1.2rem">
+			<div style="padding: 10px; font-weight: bold; font-size: 1.2rem">
 				PSALM
 			</div>
 			<a href="#" class="admin-sidebar-item active"
-				><i class="fas fa-home"></i> Dashboard Overview</a
+				><i class="fas fa-home"></i> Dashboard</a
 			>
 			<a href="#" class="admin-sidebar-item"
-				><i class="fas fa-file-alt"></i> Manage All Reports</a
+				><i class="fa-solid fa-city"></i> Departments</a
 			>
 			<a href="#" class="admin-sidebar-item"
-				><i class="fas fa-bullhorn"></i> Create Announcements</a
+				><i class="fa-solid fa-users"></i> Board of Trustees</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-user-group"></i> Campus Missionary</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-list"></i>Master List</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-chart-column"></i>Statistics</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-book-open"></i>Training</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-handshake"></i>Partnership Development</a
 			>
 			<a href="#" class="admin-sidebar-item"
 				><i class="fas fa-chart-line"></i> Team Analytics</a
 			>
 			<a href="#" class="admin-sidebar-item"
 				><i class="fas fa-users-cog"></i> User & Role Management</a
+			>
+			<a href="#" class="admin-sidebar-item"
+				><i class="fa-solid fa-gear"></i> Settings</a
 			>
 			<a href="#" class="admin-sidebar-item" style="margin-top: auto"
 				><i class="fas fa-sign-out-alt"></i> Logout</a
@@ -47,6 +65,20 @@
 					</div>
 				</div>
 			</header>
+
+			<section class="stats-grid">
+				<div class="card">
+					<h3 class="title">Evangelistic Contact:</h3> <strong class="number">17,029</strong>
+				</div>
+				<div class="card">
+					<h3 class="title">Spiritual Interest:</h3> <strong class="number">14,125</strong>
+				</div>
+				<div class="card"><h3 class="title">Enrolled:</h3> <strong class="number">2,623</strong></div>
+				<div class="card"><h3 class="title">Graduate:</h3> <strong class="number">1,414</strong></div>
+				<div class="card">
+					<h3 class="title">Ushered to Local Church:</h3> <strong class="number">122</strong>
+				</div>
+			</section>
 
 			<section class="admin-card">
 				<h3 class="admin-section-title">Missionary Control Panel</h3>
@@ -96,8 +128,19 @@
 				</div>
 			</section>
 
+			<section class="stats-grid">
+				<div class="card"><h3 class="title">Basic:</h3> <strong class="number">274</strong></div>
+				<div class="card"><h3 class="title">Advance:</h3> <strong class="number">46</strong></div>
+				<div class="card"><h3 class="title">Specialized:</h3> <strong class="number">17</strong></div>
+				<div class="card"><h3 class="title">Administrative:</h3>
+					 <strong class="number">15</strong>
+				</div>
+				<div class="card"><h3 class="title">Lay Basic:</h3><strong class="number">14</strong></div>
+				</div>
+			</section>
+
 			<section class="admin-card">
-				<h3 class="admin-section-title">Global Reports Review & Approval</h3>
+				<h3 class="admin-section-title">National Reports Review & Approval</h3>
 				<table class="admin-table">
 					<thead class="admin-th">
 						<tr>
@@ -137,6 +180,18 @@
 						</tr>
 					</tbody>
 				</table>
+			</section>
+
+			<section class="stats-grid">
+				<div class="card"><h3 class="title">Awareness Impact Group:</h3>
+					 <strong class="number">83</strong>
+				</div>
+				<div class="card"><h3 class="title">Master Awareness Impact Group:</h3>
+					 <strong class="number">16</strong>
+				</div>
+				<div class="card"><h3 class="title">Lay Awareness Impact Group:</h3>
+					 <strong class="number">83</strong>
+				</div>
 			</section>
 
 			<section class="admin-card">
