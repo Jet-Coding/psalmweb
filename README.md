@@ -1,1 +1,1 @@
-this app is for personal use only!
+this app is for organizational use!
