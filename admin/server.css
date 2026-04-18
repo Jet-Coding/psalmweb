@@ -60,6 +60,11 @@ body {
 	border-left: 5px solid var(--primary-accent);
 }
 
+.admin-dashboard {
+	margin: 0;
+	padding: 0;
+}
+
 /* --- Admin Main Content Area --- */
 .admin-main {
 	flex-grow: 1;
