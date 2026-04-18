@@ -445,7 +445,7 @@ nav {
 
 .about-content {
 	flex: 2;
-	background-color: var(--dark);
+	background-color: var(--green);
 	padding: 30px;
 	border-radius: 20px;
 }
