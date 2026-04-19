@@ -358,19 +358,6 @@ nav {
 	border-radius: 20px;
 } */
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 992px) {
-	.testimonial-card {
-		min-width: calc(50% - 20px); /* 2 cards on tablets */
-	}
-}
-
-@media (max-width: 768px) {
-	.testimonial-card {
-		min-width: 100%; /* 1 card on mobile */
-	}
-}
-
 /* Contact Section */
 .contact {
 	padding: 5rem 5%;
@@ -959,10 +946,14 @@ a {
 	text-decoration: none;
 }
 
-@media (max-width: 800px) {
+/* Tablet Responsive */
+@media (max-width: 992px) {
+	.testimonial-card {
+		min-width: calc(50% - 20px);
+	}
 	.modal-content {
 		flex-direction: column;
-		max-height: 90vh;
+		max-height: 80vh;
 	}
 	.modal-content img,
 	.modal-info {
@@ -971,6 +962,9 @@ a {
 	.modal-info {
 		padding: 20px;
 	}
+	.modal-info .modal-title {
+		font-size: 1.5rem;
+	}
 }
 
 /* Mobile Responsive */
@@ -978,7 +972,6 @@ a {
 	.menu-icon {
 		display: block;
 	}
-	/* Target the nav-links (assuming they are siblings of the checkbox) */
 	.nav-links {
 		display: block;
 		position: absolute;
@@ -1010,25 +1003,46 @@ a {
 		align-items: center;
 	}
 	.hero .overlay h1 {
-		font-size: 2.5em;
+		font-size: 4rem;
 		margin-bottom: 10px;
 	}
 	.hero .overlay p {
-		font-size: 1.5em;
+		font-size: 2rem;
 		margin-bottom: 10px;
+		text-align: center;
 	}
-	.hero .overlay button {
+	/*.hero .overlay button {
 		padding: 5px 19px;
 		font-size: 1em;
 		border-radius: 5px;
 		background-color: var(--light);
 		color: var(--primary);
 		cursor: pointer;
+	} */
+	.section-title {
+		font-size: 2rem;
+		text-align: center;
 	}
-	.history-section {
-		padding: 1rem;
-		grid-template-columns: 1fr;
-		display: block;
+	.container {
+		display: grid;
+		grid-template-columns: 1fr; /* Creates one single column */
+		justify-items: center; /* Centers the content */
+	}
+	.history-content {
+		text-align: center;
+	}
+	.history-content h3 {
+		font-size: 1.5rem;
+	}
+	.history-content p {
+		font-size: 1rem;
+	}
+	.community-image img {
+		min-width: 100%;
+		align-self: center;
+	}
+	.testimonial-card {
+		min-width: 100%;
 	}
 	.about-content,
 	.contact-container {
