@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
@@ -17,6 +18,8 @@
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	color: var(--dark);
+	line-height: 1.6;
+	overflow-x: hidden;
 }
 
 /* Navigation */
@@ -40,14 +43,12 @@ nav {
 	text-decoration: none;
 }
 
-/* Sizing the icon */
 .logo-image {
 	height: 45px;
 	width: auto;
 	display: block;
 }
 
-/* Styling the "PSALM" text next to the icon */
 .brand-name {
 	color: var(--primary);
 	font-size: 1.5rem;
@@ -60,20 +61,16 @@ nav {
 	display: flex;
 	list-style: none;
 	gap: 2rem;
+	align-items: center;
 }
-
 .nav-links a {
 	text-decoration: none;
 	color: var(--dark);
 	font-weight: 500;
-	transition: color 0.3s;
+	transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-	color: var(--green);
-}
-
-.nav-links a.active {
+.nav-links a:hover .nav-links a.active {
 	color: var(--green);
 }
 
@@ -137,18 +134,27 @@ nav {
 	height: 90vh;
 	background-size: cover;
 	background-position: center;
+	position: relative; /* Context for overlay */
 }
 
 .hero .overlay {
 	position: absolute;
+	top: 0; /* Added fix */
 	left: 0;
 	width: 100%;
-	height: 90vh;
-	background: rgba(0, 128, 0, 0.4);
+	height: 100%;
+	background: rgba(
+		0,
+		77,
+		38,
+		0.5
+	); /* Adjusted to match your primary green theme */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
+	padding: 20px;
 }
 
 .hero .overlay h1 {
@@ -763,7 +769,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-	animation: slideUp 0.4s ease-out;
+	animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content img {
@@ -945,6 +951,17 @@ a {
 	text-decoration: none;
 }
 
+@keyframes slideUp {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 /* breakpoints */
 @media (max-width: 992px) {
 	.testimonial-card {
@@ -952,17 +969,12 @@ a {
 	}
 	.modal-content {
 		flex-direction: column;
-		max-height: 80vh;
+		max-height: 90vh;
+		width: 95%;
 	}
 	.modal-content img,
 	.modal-info {
 		width: 100%;
-	}
-	.modal-info {
-		padding: 20px;
-	}
-	.modal-info .modal-title {
-		font-size: 1.5rem;
 	}
 }
 
@@ -971,17 +983,19 @@ a {
 		display: block;
 	}
 	.nav-links {
-		display: block;
-		position: absolute;
+		position: fixed; /* Better than absolute for mobile menus */
 		top: 5.2rem;
-		left: -200px;
+		left: -100%;
+		height: 100vh;
+		width: 10rem; /* Slightly wider for better text fit */
 		background-color: var(--light);
-		width: 10rem;
-		text-align: center;
-		padding: 20px 0;
+		flex-direction: column;
+		justify-content: center;
 		border-radius: 0 10px 10px 0;
-		transition: all 0.5s;
+		transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
 	}
+	/* Fixed Checkbox Logic: Uses the ID of your checkbox */
 	.open {
 		left: 0;
 	}
@@ -990,25 +1004,25 @@ a {
 	}
 	.nav-links li:hover {
 		background: none;
-	}
-	.nav-links li:hover {
 		color: var(--dark);
 	}
 	.cta-button {
 		display: none;
 	}
 	.hero {
+		display: flex; /* Ensure flex is active */
+		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 	}
+	/* Hero adjustments for mobile */
 	.hero .overlay h1 {
-		font-size: 4rem;
-		margin-bottom: 10px;
+		font-size: 2.5rem;
 	}
 	.hero .overlay p {
-		font-size: 2rem;
-		margin-bottom: 10px;
-		text-align: center;
+		font-size: 1.2rem;
 	}
+
 	/*.hero .overlay button {
 		padding: 5px 19px;
 		font-size: 1em;
@@ -1020,52 +1034,42 @@ a {
 	.testimonial-card {
 		min-width: 100%;
 	}
-	.about-content,
+	.contact,
 	.contact-container {
 		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 	.about-container {
 		flex-direction: column;
-		text-align: center;
-	}
-
-	.about-image img {
-		margin: 0 auto;
+		height: auto;
 	}
 }
 
 @media (max-width: 400px) {
+	.history-section {
+		padding: 1rem;
+	}
 	.section-title {
-		font-size: 2rem;
+		font-size: 1.8rem; /* Slightly smaller for very narrow screens */
 		text-align: center;
 	}
 	.container {
 		display: grid;
-		grid-template-columns: 1fr; /* Creates one single column */
-		justify-items: center; /* Centers the content */
+		grid-template-columns: 1fr;
+		justify-items: center;
 	}
 	.history-content {
 		text-align: center;
 	}
 	.history-content h3 {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 	}
 	.history-content p {
 		font-size: 1rem;
 	}
 	.community-image img {
-		min-width: 100%;
-		align-self: center;
-	}
-}
-
-@keyframes slideUp {
-	from {
-		transform: translateY(50px);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(0);
-		opacity: 1;
+		width: 100%; /* Changed from min-width to width for better scaling */
+		height: auto;
+		display: block;
 	}
 }
