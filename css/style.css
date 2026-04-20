@@ -1011,7 +1011,6 @@ a {
 	.hero .overlay p {
 		font-size: 1.2rem;
 	}
-
 	/*.hero .overlay button {
 		padding: 5px 19px;
 		font-size: 1em;
@@ -1041,13 +1040,42 @@ a {
 	}
 	.dot.active {
 		background-color: #007bff;
-		width: 30px; /* Stretched effect for the active dot 
+		width: 30px; 
 		border-radius: 20px;
 	} */
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	.community-image {
+		order: -1;
+		margin-bottom: 20px;
+	}
+	.history-content {
+		order: 1;
+	}
 	.contact,
 	.contact-container {
 		grid-template-columns: 1fr;
 		gap: 2rem;
+	}
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.contact-form button,
+	.contact-form input[type="submit"] {
+		width: 100%;
+		padding: 15px;
+		font-size: 1.1rem;
+		margin-top: 10px;
+		display: block;
+		border-radius: 8px;
+	}
+	.contact-info h3 {
+		text-align: center;
+		order: 2;
 	}
 	#about {
 		height: auto;
@@ -1116,6 +1144,48 @@ a {
 		max-width: 90%;
 		line-height: 1.4;
 	}
+	#programs {
+		margin: 20px 10px;
+		padding: 15px;
+	}
+	#programs h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.programs-container {
+		grid-template-columns: 1fr;
+		gap: 25px;
+	}
+	.program {
+		padding: 15px;
+	}
+	.program img {
+		height: 250px;
+		width: 100%;
+	}
+	.program h3 {
+		font-size: 1.3rem;
+		margin-top: 10px;
+	}
+	.modal-content {
+		flex-direction: column;
+		width: 95%;
+		max-height: 90vh;
+		overflow-y: auto;
+	}
+	.modal-content img,
+	.modal-info {
+		width: 100%;
+	}
+	.modal-info {
+		padding: 20px;
+	}
+
+	.close-btn {
+		top: 10px;
+		right: 20px;
+		font-size: 30px;
+	}
 }
 
 @media (max-width: 400px) {
@@ -1123,7 +1193,7 @@ a {
 		padding: 1rem;
 	}
 	.section-title {
-		font-size: 1.8rem; /* Slightly smaller for very narrow screens */
+		font-size: 1.8rem;
 		text-align: center;
 	}
 	.container {
@@ -1141,7 +1211,7 @@ a {
 		font-size: 1rem;
 	}
 	.community-image img {
-		width: 100%; /* Changed from min-width to width for better scaling */
+		width: 100%;
 		height: auto;
 		display: block;
 	}
