@@ -141,7 +141,6 @@ nav {
 
 .hero .overlay {
 	position: absolute;
-	top: 10;
 	left: 0;
 	width: 100%;
 	height: 90vh;
@@ -946,7 +945,7 @@ a {
 	text-decoration: none;
 }
 
-/* Tablet Responsive */
+/* breakpoints */
 @media (max-width: 992px) {
 	.testimonial-card {
 		min-width: calc(50% - 20px);
@@ -967,7 +966,6 @@ a {
 	}
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
 	.menu-icon {
 		display: block;
@@ -1019,6 +1017,24 @@ a {
 		color: var(--primary);
 		cursor: pointer;
 	} */
+	.testimonial-card {
+		min-width: 100%;
+	}
+	.about-content,
+	.contact-container {
+		grid-template-columns: 1fr;
+	}
+	.about-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-image img {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 400px) {
 	.section-title {
 		font-size: 2rem;
 		text-align: center;
@@ -1040,21 +1056,6 @@ a {
 	.community-image img {
 		min-width: 100%;
 		align-self: center;
-	}
-	.testimonial-card {
-		min-width: 100%;
-	}
-	.about-content,
-	.contact-container {
-		grid-template-columns: 1fr;
-	}
-	.about-container {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.about-image img {
-		margin: 0 auto;
 	}
 }
 
