@@ -39,12 +39,12 @@ nav {
 .logo a {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 4px;
 	text-decoration: none;
 }
 
 .logo-image {
-	height: 45px;
+	height: 30px;
 	width: auto;
 	display: block;
 }
@@ -89,12 +89,10 @@ nav {
 	transform: scale(1.05);
 }
 
-/* 1. Hide the actual checkbox */
 .menu-btn {
 	display: none;
 }
 
-/* 2. Style the Burger Icon */
 .menu-icon {
 	display: none;
 	cursor: pointer;
@@ -104,12 +102,10 @@ nav {
 	transition: transform 0.3s ease;
 }
 
-/* Hide the 'X' by default */
 #menu-close {
 	display: none;
 }
 
-/* When checked, hide the 'Burger' and show the 'X' */
 .menu-btn:checked ~ .menu-icon #menu-open {
 	display: none;
 }
@@ -118,12 +114,10 @@ nav {
 	display: inline-block;
 }
 
-/* 3. THE MAGIC: When checkbox is checked, slide the menu in */
 .menu-btn:checked ~ .nav-links {
 	left: 0;
 }
 
-/* Optional: Rotate the burger icon slightly when clicked */
 .menu-btn:checked ~ .menu-icon {
 	transform: rotate(90deg);
 }
@@ -131,24 +125,19 @@ nav {
 /* Hero Section */
 .hero {
 	background-image: url("../images/background.jpg");
-	height: 90vh;
+	height: 100vh;
 	background-size: cover;
 	background-position: center;
-	position: relative; /* Context for overlay */
+	position: relative;
 }
 
 .hero .overlay {
 	position: absolute;
-	top: 0; /* Added fix */
+	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(
-		0,
-		77,
-		38,
-		0.5
-	); /* Adjusted to match your primary green theme */
+	background: rgba(0, 77, 38, 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -188,7 +177,7 @@ nav {
 
 /* History Section */
 #history-section {
-	padding: 2rem;
+	padding: 3rem;
 	background: var(--light);
 }
 
@@ -196,20 +185,20 @@ nav {
 	text-align: center;
 	font-size: 2.5rem;
 	color: var(--primary);
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-	max-width: 1200px;
+	grid-template-columns: 1fr 0.4fr;
+	gap: 1rem;
+	max-width: 1500px;
 	margin: 0 auto;
 	align-items: center;
 }
 
 .history-content h3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	color: var(--primary);
 	margin-bottom: 1rem;
 	border-bottom: 1px solid var(--primary);
@@ -227,26 +216,101 @@ nav {
 
 .community-image img {
 	background: var(--primary);
-	height: 300px;
+	height: 280px;
 	border-radius: 10px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	color: var(--light);
-	font-size: 1.5rem;
 }
+
+/* --- Analytics Section --- */
+/* --- 
+#stats {
+	padding: 1rem;
+	background: var(--lightdark);
+	min-height: calc(70vh - 70px);
+}
+
+.page-header {
+	text-align: center;
+	font-size: 1rem;
+	color: var(--primary);
+	margin-bottom: 2rem;
+}
+
+.header-actions button span {
+	font-size: 1.2rem;
+	margin-right: 0.6rem;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 3rem;
+	margin-top: 2rem;
+}
+
+.card-single {
+	background: var(--lightgreen);
+	padding: 1rem;
+	border-radius: 2px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-flex {
+	display: grid;
+	grid-template-columns: 70% auto;
+	align-items: center;
+}
+
+.card-head span {
+	display: block;
+	text-transform: uppercase;
+	color: var(--text-dark);
+	font-size: 0.8rem;
+}
+
+.card-head small {
+	font-weight: 600;
+	color: var(--border-color);
+}
+
+.card-info h2 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: var(--text-dark);
+}
+
+.card-chart span {
+	font-size: 4rem;
+}
+
+.card-chart.success span {
+	color: var(--status-green);
+}
+
+.card-chart.danger span {
+	color: var(--status-red);
+}
+
+.card-chart.moderate span {
+	color: var(--status-yellow);
+}
+--- */
 
 /* --- Testimonials Section --- */
 #testimonials {
-	padding: 80px 20px;
+	padding: 20px 10px;
 	background-color: var(--light);
 	text-align: center;
+	margin-top: 1rem;
+	border-top: 1px solid var(--lightgreen);
 }
 
 .testimonials-container {
 	max-width: 1100px;
 	margin: 0 auto;
-	overflow: hidden; /* Keeps the cards from spilling out */
+	overflow: hidden;
 }
 
 #testimonials h2 {
@@ -265,13 +329,12 @@ nav {
 .slider-wrapper {
 	display: flex;
 	transition: transform 0.5s ease-in-out;
-	/* If you aren't using JS yet, 'gap' helps space them */
 	gap: 20px;
 }
 
 /* --- Testimonial Card --- */
 .testimonial-card {
-	min-width: calc(33.333% - 20px); /* Shows 3 cards on desktop */
+	min-width: calc(33.333% - 20px);
 	background: var(--lightdark);
 	padding: 40px 30px;
 	border-radius: 15px;
@@ -301,7 +364,7 @@ nav {
 	border-radius: 50%;
 	object-fit: cover;
 	margin-right: 15px;
-	border: 3px solid var(--green); /* PSALM Primary Color */
+	border: 3px solid var(--green);
 }
 
 .profile-info .name {
@@ -380,7 +443,7 @@ nav {
 
 /* About Section */
 #about {
-	padding: 80px 20px;
+	padding: 50px 10px;
 	background-image: url("../images/background.jpg");
 	color: var(--light);
 	min-height: 100vh;
@@ -394,10 +457,10 @@ nav {
 .about-container {
 	display: flex;
 	align-items: center;
-	gap: 50px;
-	max-width: 1200px;
+	gap: 20px;
+	max-width: 1500px;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 20px;
 	width: 100%;
 }
 
@@ -409,7 +472,7 @@ nav {
 
 .about-image img {
 	width: 100%;
-	max-width: 400px;
+	max-width: 500px;
 	height: auto;
 	display: block;
 	border-radius: 20px;
@@ -425,7 +488,7 @@ nav {
 }
 
 .about-content h3 {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -518,7 +581,7 @@ nav {
 
 /* Timeline Section */
 .timeline-section {
-	padding: 80px 10%;
+	padding: 40px 10%;
 	background-color: var(--light);
 	text-align: center;
 }
@@ -533,7 +596,7 @@ nav {
 	width: 50px;
 	height: 3px;
 	background-color: var(--primary);
-	margin: 15px auto 50px;
+	margin: 5px auto 50px;
 }
 
 .timeline-container {
@@ -607,7 +670,7 @@ nav {
 }
 
 .campus-header h2 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: var(--primary);
 }
 
@@ -669,7 +732,7 @@ nav {
 }
 
 #programs h2 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	margin-bottom: 20px;
 	text-align: left;
 	color: var(--primary);
@@ -809,7 +872,7 @@ nav {
 	margin-bottom: 50px;
 }
 .national-header h2 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: var(--primary);
 }
 
@@ -912,13 +975,13 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	border-bottom: 1px solid var(--primary);
 }
 
 .footer-col h4 {
 	color: var(--green);
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-size: 0.9rem;
 }
 
@@ -983,7 +1046,7 @@ a {
 		left: 0;
 	}
 	.nav-links li {
-		padding: 10px 0;
+		padding: 5px 0;
 	}
 	.nav-links li:hover {
 		background: none;
@@ -1043,7 +1106,8 @@ a {
 	}
 	.community-image {
 		order: -1;
-		margin-bottom: 20px;
+		margin-bottom: 1rem;
+		padding-bottom: 0%;
 	}
 	.history-content {
 		order: 1;
@@ -1096,6 +1160,9 @@ a {
 		width: 100%;
 		padding: 20px;
 		flex: none;
+	}
+	.about-content h3 {
+		font-size: 1.2rem;
 	}
 	.values-container {
 		flex-direction: column;
